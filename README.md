@@ -1,2 +1,48 @@
-# rdb_micro_project
-micro project for rdb class autumn 2024
+# Welcome to FontaineBleau
+
+Dans le cadre de notre cours sur les bases de données, nous avons choisi de réaliser un micro-projet qui met en valeur la richesse de l'une des zones d'escalade les plus emblématiques de France : Fontainebleau. Ce projet vise à créer une base de données qui représente cette zone de grimpe.
+
+# Quelques métriques
+
+Fontainebleau est un lieu mondialement connu pour ses blocs d'escalade. Avec plus de 50 000 voies répertoriées, réparties en 8 secteurs principaux et 90 sous-secteurs, la complexité et la richesse des données à modéliser en font un choix idéal pour notre projet.
+
+# Particularités
+
+Pour enrichir notre projet, nous avons décidé d'ajouter plusieurs fonctionnalités qui vont au-delà d'une simple base de données. Ces fonctionnalités incluent :
+
+Création de comptes utilisateurs : Les utilisateurs pourront créer leur propre profil afin de suivre leurs activités d'escalade.
+
+Suivi des performances : Les grimpeurs pourront enregistrer les voies qu'ils ont réalisées et obtenir des statistiques personnelles.
+
+Classements et statistiques : Création de classements entre utilisateurs et analyse statistique des zones et des voies.
+
+# Challenge
+
+L'un des défis les plus intéressants que nous nous sommes fixés est de déterminer si la difficulté attribuée à une voie est "réaliste". Cela sera fait en analysant les données des utilisateurs ayant réussi cette voie : leur expérience, leur historique, et leurs performances sur d'autres voies.
+
+# Aspects modélisés
+
+Notre modélisation comprendra les éléments suivants :
+
+Voies : nom, difficulté, secteur, état (actif, fermé, en réparation).
+
+Secteurs : nom, description.
+
+Utilisateurs : nom, prénom, email, téléphone, mot de passe, historique des voies réalisées.
+
+# Motivation
+
+Ce projet est particulièrement motivant car il propose une base simple et accessible, tout en offrant la possibilité de l'étendre vers des aspects beaucoup plus complexes. Par exemple, nous pourrions intégrer des algorithmes d'analyse de données pour prédire le succès d'un utilisateur sur une voie ou modéliser l'affluence dans les différents secteurs.
+
+# Données à disposition
+
+Pour alimenter notre base de données, nous avons plusieurs sources potentielles :
+
+Les données disponibles sur le site officiel de Fontainebleau.
+
+La génération de données fictives à l'aide d'outils comme Mockaroo.
+
+Des sites externes ou communautaires spécialisés dans l'escalade qui répertorient les voies et les secteurs.
+
+Ce projet représente une opportunité idéale pour appliquer les concepts appris en cours tout en travaillant sur un thème concret et passionnant.
+
