@@ -20,15 +20,26 @@ Classements et statistiques : Création de classements entre utilisateurs et ana
 
 L'un des défis les plus intéressants que nous nous sommes fixés est de déterminer si la difficulté attribuée à une voie est "réaliste". Cela sera fait en analysant les données des utilisateurs ayant réussi cette voie : leur expérience, leur historique, et leurs performances sur d'autres voies.
 
-# Aspects modélisés
+# Aspects Modélisés
+## Secteurs et Sous-Secteurs :
 
-Notre modélisation comprendra les éléments suivants :
+Les secteurs sont décrits par leur nom et une description.
+Chaque secteur peut contenir plusieurs sous-secteurs, qui sont également décrits individuellement.
+## Blocs (Boulders) :
 
-Voies : nom, difficulté, secteur, état (actif, fermé, en réparation).
+Chaque bloc est lié à un sous-secteur et a un niveau de difficulté, un état, et des coordonnées géographiques.
+## Grades :
 
-Secteurs : nom, description.
+Les grades attribués aux blocs incluent un score numérique et une étiquette descriptive.
+## Utilisateurs :
 
-Utilisateurs : nom, prénom, email, téléphone, mot de passe, historique des voies réalisées.
+Les utilisateurs possèdent des informations personnelles telles que leur nom, prénom, email, téléphone, adresse, mot de passe, et âge.
+## Blocs Grimpés :
+
+Cette table relie les utilisateurs aux blocs qu'ils ont réalisés. Elle contient également la date de la réalisation et des commentaires.
+## Classements :
+
+Chaque utilisateur possède un score utilisé pour établir un classement global.
 
 # Motivation
 
