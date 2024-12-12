@@ -56,7 +56,7 @@ La génération de données fictives à l'aide d'outils comme Mockaroo.
 Des sites externes ou communautaires spécialisés dans l'escalade qui répertorient les voies et les secteurs.
 
 Ce projet représente une opportunité idéale pour appliquer les concepts appris en cours tout en travaillant sur un thème concret et passionnant.
-# Requêtes souhaités
+# Requêtes souhaitées
 Dans cette partie nous allons définir les requêtes qui vont être utilisés pour ce projet.
 ## Utilisateur
 - Création d'un compte utilisateur
