@@ -57,3 +57,7 @@ Des sites externes ou communautaires spécialisés dans l'escalade qui répertor
 
 Ce projet représente une opportunité idéale pour appliquer les concepts appris en cours tout en travaillant sur un thème concret et passionnant.
 
+# Schéma de notre modélisation 
+<img src="schema.svg" alt="Tables" width="1000">
+
+
