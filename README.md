@@ -56,7 +56,32 @@ La génération de données fictives à l'aide d'outils comme Mockaroo.
 Des sites externes ou communautaires spécialisés dans l'escalade qui répertorient les voies et les secteurs.
 
 Ce projet représente une opportunité idéale pour appliquer les concepts appris en cours tout en travaillant sur un thème concret et passionnant.
-
+# Requêtes souhaités
+Dans cette partie nous allons définir les requêtes qui vont être utilisés pour ce projet.
+## Utilisateur
+- Création d'un compte utilisateur
+- Authentification de l'utilisateur
+- Modification des informations de l'utilisateur
+## Navigation
+- Liste des secteurs
+- Affichage des sous-secteurs dans un secteur donné
+- Affichage des blocs dans les sous-secteurs
+- Afficher les détails d'un bloc spécifique
+- Afficher le score moyen des personnes qui ont grimpés ce bloc
+## Gestion des blocs grimpés
+- Nouveau bloque grimpé pour un utilisateur (date, commentaire)
+- Voir les blocs qu'un utilisateur a grimpé
+- Voir les blocs dans un secteur ou sous-secteur spécifique pour lister les blocs
+- Nombre total de bloc grimpé
+- Niveau moyen des blocs grimpés par l'utilisateur
+## Classement
+- Calculer le score d'un utilisateur
+- Obtenir le classement des utilisateur
+- Classement total score
+- Classement par difficulté
+## Recherche
+- Recherche des blocs par niveau de difficulté
+- Recherche des blocs par état
 # Schéma de notre modélisation 
 <img src="schema.svg" alt="Tables" width="1000">
 
