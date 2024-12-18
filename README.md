@@ -86,6 +86,8 @@ Dans cette partie nous allons définir les requêtes qui vont être utilisés po
 - Index sur les clés étrangères: pour accélerer les jointures (secteurs, sous-secteurs, utilisateurs)
 - Index sur les difficultés de blocs
 - Index sur les scores utilisateurs (pour le classement)
+# Relation circulaire
+A la suppression d'un utilisateur il faudra qu'il soit supprimer des blocs ainsi que du classement. Dans ce cas il faudra utiliser ON DELETE CASCADE pour que le classement et les blocs soient mis à jours.
 # Limite du système
 - Les conditions métérologiques et le potentiel impacte sur les secteurs
 - Gestion des équipements partagés (crash pads, etc.)
