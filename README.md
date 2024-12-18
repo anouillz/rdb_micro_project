@@ -82,7 +82,16 @@ Dans cette partie nous allons définir les requêtes qui vont être utilisés po
 ## Recherche
 - Recherche des blocs par niveau de difficulté
 - Recherche des blocs par état
-# Schéma de notre modélisation 
+# Index
+- Index sur les clés étrangères: pour accélerer les jointures (secteurs, sous-secteurs, utilisateurs)
+- Index sur les difficultés de blocs
+- Index sur les scores utilisateurs (pour le classement)
+# Limite du système
+- Les conditions métérologiques et le potentiel impacte sur les secteurs
+- Gestion des équipements partagés (crash pads, etc.)
+- Analyse avancées (prévision de réussite sur une voie par un utilisateur)
+- L'ajout de parcours sur les voies avec différent niveau
+- # Schéma de notre modélisation 
 <img src="schema.svg" alt="Tables" width="1000">
 
 
