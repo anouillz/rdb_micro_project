@@ -94,6 +94,6 @@ A la suppression d'un utilisateur il faudra qu'il soit supprimer des blocs ainsi
 - Analyse avancées (prévision de réussite sur une voie par un utilisateur)
 - L'ajout de parcours sur les voies avec différent niveau
 - # Schéma de notre modélisation 
-<img src="schema.svg" alt="Tables" width="1000">
+
 
 
