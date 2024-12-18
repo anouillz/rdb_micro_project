@@ -6,7 +6,7 @@ CREATE TABLE sector (
 
 CREATE TABLE grade (
   gd_id SERIAL PRIMARY KEY,
-  score VARCHAR(10) NOT NULL,
+  grade_score VARCHAR(10) NOT NULL,
   name VARCHAR(3) NOT NULL
 );
 
