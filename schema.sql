@@ -43,7 +43,7 @@ CREATE TABLE boulder_climbed (
   bdc_id SERIAL PRIMARY KEY,
   cl_id INTEGER,
   bd_id INTEGER,
-  date DATE,
+  date_climb DATE,
   comments TEXT,
   FOREIGN KEY (cl_id) REFERENCES climber(cl_id),
   FOREIGN KEY (bd_id) REFERENCES boulder(bd_id)
