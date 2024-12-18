@@ -1,60 +1,57 @@
 CREATE TABLE sector (
-  id SERIAL PRIMARY KEY,
+  sect_id SERIAL PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
   description TEXT
 );
 
 CREATE TABLE grade (
-  id SERIAL PRIMARY KEY,
-  grade_score VARCHAR(10) NOT NULL,
-  name VARCHAR(255) NOT NULL
+  gd_id SERIAL PRIMARY KEY,
+  score VARCHAR(10) NOT NULL,
+  name VARCHAR(3) NOT NULL
 );
 
 CREATE TABLE subsector (
-  id SERIAL PRIMARY KEY,
-  id_sector INTEGER,
+  subsect_id SERIAL PRIMARY KEY,
+  sect_id INTEGER,
   name VARCHAR(255) NOT NULL,
   description TEXT,
-  FOREIGN KEY (id_sector) REFERENCES sector(id)
+  FOREIGN KEY (sect_id) REFERENCES sector(sect_id)
 );
 
 CREATE TABLE boulder (
-  id SERIAL PRIMARY KEY,
-  id_subsector INTEGER,
-  id_grade INTEGER,
+  bd_id SERIAL PRIMARY KEY,
+  subsect_id INTEGER,
+  gd_id INTEGER,
   condition INTEGER check (condition>0),
   coordinates VARCHAR(255),
-  FOREIGN KEY (id_subsector) REFERENCES subsector(id),
-  FOREIGN KEY (id_grade) REFERENCES grade(id)
+  FOREIGN KEY (subsect_id) REFERENCES subsector(subsect_id),
+  FOREIGN KEY (gd_id) REFERENCES grade(gd_id)
 );
 
-
-
-
-CREATE TABLE "user" (
-  id SERIAL PRIMARY KEY,
+CREATE TABLE climber (
+  cl_id SERIAL PRIMARY KEY,
   fname VARCHAR(255) NOT NULL,
   lname VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL UNIQUE,
   phone VARCHAR(20),
   address TEXT,
-  pwd VARCHAR(255) NOT NULL,
+  pwd_hash VARCHAR(255) NOT NULL,
   age INTEGER Check (age >0)
 );
 
 CREATE TABLE boulder_climbed (
-  id SERIAL PRIMARY KEY,
-  id_user INTEGER,
-  id_boulder INTEGER,
+  bdc_id SERIAL PRIMARY KEY,
+  cl_id INTEGER,
+  bd_id INTEGER,
   date DATE,
   comments TEXT,
-  FOREIGN KEY (id_user) REFERENCES "user"(id),
-  FOREIGN KEY (id_boulder) REFERENCES boulder(id)
+  FOREIGN KEY (cl_id) REFERENCES climber(cl_id),
+  FOREIGN KEY (bd_id) REFERENCES boulder(bd_id)
 );
 
 CREATE TABLE ranking (
-  id SERIAL PRIMARY KEY,
-  id_user INTEGER,
+  rk_id SERIAL PRIMARY KEY,
+  cl_id INTEGER,
   score INTEGER,
-  FOREIGN KEY (id_user) REFERENCES "user"(id)
+  FOREIGN KEY (cl_id) REFERENCES climber(cl_id)
 );
