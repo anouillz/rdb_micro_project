@@ -12,7 +12,7 @@ CREATE TABLE grade (
 
 CREATE TABLE subsector (
   subsect_id SERIAL PRIMARY KEY,
-  sect_id INTEGER,
+  sect_id INTEGER NOT NULL,
   name VARCHAR(255) NOT NULL,
   description TEXT,
   FOREIGN KEY (sect_id) REFERENCES sector(sect_id)
@@ -20,8 +20,8 @@ CREATE TABLE subsector (
 
 CREATE TABLE boulder (
   bd_id SERIAL PRIMARY KEY,
-  subsect_id INTEGER,
-  gd_id INTEGER,
+  subsect_id INTEGER NOT NULL,
+  gd_id INTEGER NOT NULL,
   condition INTEGER check (condition>0),
   coordinates VARCHAR(255),
   FOREIGN KEY (subsect_id) REFERENCES subsector(subsect_id),
@@ -41,8 +41,8 @@ CREATE TABLE climber (
 
 CREATE TABLE boulder_climbed (
   bdc_id SERIAL PRIMARY KEY,
-  cl_id INTEGER,
-  bd_id INTEGER,
+  cl_id INTEGER NOT NULL,
+  bd_id INTEGER NOT NULL,
   date_climb DATE,
   comments TEXT,
   FOREIGN KEY (cl_id) REFERENCES climber(cl_id),
@@ -51,8 +51,8 @@ CREATE TABLE boulder_climbed (
 
 CREATE TABLE ranking (
   rk_id SERIAL PRIMARY KEY,
-  cl_id INTEGER,
-  score INTEGER,
+  cl_id INTEGER NOT NULL,
+  score INTEGER NOT NULL,
   FOREIGN KEY (cl_id) REFERENCES climber(cl_id)
 );
 
