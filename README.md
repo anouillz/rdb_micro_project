@@ -93,6 +93,10 @@ A la suppression d'un utilisateur il faudra qu'il soit supprimer des blocs ainsi
 - Gestion des équipements partagés (crash pads, etc.)
 - Analyse avancées (prévision de réussite sur une voie par un utilisateur)
 - L'ajout de parcours sur les voies avec différent niveau
+# Format du schéma NF3
+- Chaque table a une clé primaire qui identifie de manière unique les enregistrements
+- Les colonnes non clés dépendent uniquement de la clé primaire (pas de dépendances transitives).
+- Les données sont correctement normalisées, évitant les redondances.
 # Schéma de notre modélisation 
 <img src="schem.svg" alt="Tables" width="1000">
 
