@@ -55,3 +55,14 @@ CREATE TABLE ranking (
   score INTEGER,
   FOREIGN KEY (cl_id) REFERENCES climber(cl_id)
 );
+
+-- Index sur les clés étrangères pour accélérer les jointures
+CREATE INDEX idx_subsector_sect_id ON subsector (sect_id);
+CREATE INDEX idx_boulder_gd_id ON boulder (gd_id);
+CREATE INDEX idx_ranking_cl_id ON ranking (cl_id);
+
+-- Index sur les difficultés de blocs
+CREATE INDEX idx_boulder_difficulty ON boulder (gd_id);
+
+-- Index sur les scores utilisateurs
+CREATE INDEX idx_ranking_score ON ranking (score);
