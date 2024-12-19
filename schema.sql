@@ -66,3 +66,16 @@ CREATE INDEX idx_boulder_difficulty ON boulder (gd_id);
 
 -- Index sur les scores utilisateurs
 CREATE INDEX idx_ranking_score ON ranking (score);
+
+-- Cascade pour la suppression d'utilisateur
+ALTER TABLE boulder_climbed
+ADD CONSTRAINT fk_boulder_climbed_cl_id
+FOREIGN KEY (cl_id)
+REFERENCES climber (cl_id)
+ON DELETE CASCADE;
+
+ALTER TABLE ranking
+ADD CONSTRAINT fk_ranking_cl_id
+FOREIGN KEY (cl_id)
+REFERENCES climber (cl_id)
+ON DELETE CASCADE;
