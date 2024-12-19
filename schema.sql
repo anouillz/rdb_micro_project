@@ -69,13 +69,9 @@ CREATE INDEX idx_ranking_score ON ranking (score);
 
 -- Cascade pour la suppression d'utilisateur
 ALTER TABLE boulder_climbed
-ADD CONSTRAINT fk_boulder_climbed_cl_id
-FOREIGN KEY (cl_id)
-REFERENCES climber (cl_id)
-ON DELETE CASCADE;
+  DROP CONSTRAINT boulder_climbed_cl_id_fkey,
+  ADD CONSTRAINT boulder_climbed_cl_id_fkey FOREIGN KEY (cl_id) REFERENCES climber(cl_id) ON DELETE CASCADE;
 
 ALTER TABLE ranking
-ADD CONSTRAINT fk_ranking_cl_id
-FOREIGN KEY (cl_id)
-REFERENCES climber (cl_id)
-ON DELETE CASCADE;
+  DROP CONSTRAINT ranking_cl_id_fkey,
+  ADD CONSTRAINT ranking_cl_id_fkey FOREIGN KEY (cl_id) REFERENCES climber(cl_id) ON DELETE CASCADE;
